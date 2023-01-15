@@ -22,9 +22,16 @@ inquirer.prompt(questions)
 );
 
 const createReadme = data => {
-    const literal = `
+    const readmeContents = `
     # The name of my projerct is ${data.project}!
     ## If you have questions about it please got to me linkdin ${data.linkdin}! 
     ` 
-    console.log(literal)
+    fs.writeFile('README.md', readmeContents, (err) => {
+        if (err) { 
+            console.log(err)
+        } else {
+            console.log('Enjoy your README')
+        }    
+    })
+    console.log(readmeContents)
 }
