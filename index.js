@@ -51,36 +51,40 @@ inquirer.prompt(questions)
 
 const createReadme = data => {
     const readmeContents = `
-    #${data.project}!
+#${data.project}!
     
-    ## Table of Contents
-        -[Contributers](#Contributers)
-        -[Purpose](#purpose)
-        -[Installation](#Installation)
-        -[Questions](#Questions)
-    
-    ## Contributers
-        -${data.help}
-    
-    ## Purpose 
-        -${data.description}
-    
-    ## Installation
-        -${data.installation}
+#### Table of Contents
+[Contributers](#contributers)
 
-    ## Questions
-    ### If you need to reach me with any additional quetions please reach out to me through any of the following ways!
-        -${data.email}
-        -${data.phoneNumber}
-        -[${data.github}](https://github.com/JoshuaBentley)
+[Purpose](#purpose)
+
+[Installation](#installation)
+
+[Questions](#questions)
+    
+## Contributers
+    ${data.help}
+    
+## Purpose 
+    ${data.description}
+    
+## Installation
+    ${data.installation}
+
+## Questions
+### If you need to reach me with any additional quetions please reach out to me through any of the following ways!
+    ${data.email}
+    ${data.phoneNumber}
+    -[${data.github}](https://github.com/JoshuaBentley)
         
     ` 
-    fs.writeFile('README.md', readmeContents, (err) => {
-        if (err) { 
-            console.log(err)
-        } else {
-            console.log('Enjoy your README')
-        }    
-    })
+fs.writeFile('README.md', readmeContents, (err) => {
+    if (err) { 
+         console.log(err)
+    } else {
+        console.log('Enjoy your README')
+    }    
+})
+    
     console.log(readmeContents)
 }
