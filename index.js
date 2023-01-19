@@ -51,7 +51,8 @@ inquirer.prompt(questions)
 
 const createReadme = data => {
     const readmeContents = `
-#${data.project}!
+%${data.project}!
+![GitHub all releases](https://img.shields.io/github/downloads/JoshuaBentley/ReadMe-Creeator/total?label=Link&logo=GitHub&logoColor=red&style=flat-square) 
     
 #### Table of Contents
 [Contributers](#contributers)
@@ -75,7 +76,7 @@ const createReadme = data => {
 ### If you need to reach me with any additional quetions please reach out to me through any of the following ways!
     ${data.email}
     ${data.phoneNumber}
-    -[${data.github}](https://github.com/JoshuaBentley)
+    -[${data.github}](#https://github.com/JoshuaBentley)
         
     ` 
 fs.writeFile('README.md', readmeContents, (err) => {
