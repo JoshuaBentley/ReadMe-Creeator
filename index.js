@@ -51,8 +51,9 @@ inquirer.prompt(questions)
 
 const createReadme = data => {
     const readmeContents = `
-%${data.project}!
-![GitHub all releases](https://img.shields.io/github/downloads/JoshuaBentley/ReadMe-Creeator/total?label=Link&logo=GitHub&logoColor=red&style=flat-square) 
+#${data.project}!
+\n
+![GitHub](https://img.shields.io/github/license/JoshuaBentley/ReadMe-Creeator?color=blue)
     
 #### Table of Contents
 [Contributers](#contributers)
