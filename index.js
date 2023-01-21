@@ -53,7 +53,7 @@ const createReadme = data => {
     const readmeContents = `
 #${data.project}!
 \n
-![GitHub](https://img.shields.io/github/license/JoshuaBentley/ReadMe-Creeator?color=blue)
+
     
 #### Table of Contents
 [Contributers](#contributers)
@@ -73,11 +73,16 @@ const createReadme = data => {
 ## Installation
     ${data.installation}
 
+## License
+    ![GitHub](https://img.shields.io/github/license/JoshuaBentley/ReadMe-Creeator?color=blue)
+    This README was created using the MIT license!
+    If you have any further Questions please visit https://choosealicense.com/licenses/mit/    
+
 ## Questions
 ### If you need to reach me with any additional quetions please reach out to me through any of the following ways!
-    ${data.email}
-    ${data.phoneNumber}
-    -[${data.github}](#https://github.com/JoshuaBentley)
+    email: ${data.email}
+    Cell phone: ${data.phoneNumber}
+    GitHub: https://github.com/JoshuaBentley
         
     ` 
 fs.writeFile('README.md', readmeContents, (err) => {
